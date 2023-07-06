@@ -1,0 +1,1380 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "jpn_cards",
+    "version": "1.0"
+  },
+  "paths": {
+    "/card/{query}": {
+      "get": {
+        "tags": [
+          "Card"
+        ],
+        "parameters": [
+          {
+            "name": "query",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PokemonCard"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PokemonCard"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PokemonCard"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v2/card/{query}": {
+      "get": {
+        "tags": [
+          "Card"
+        ],
+        "parameters": [
+          {
+            "name": "query",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/DescriptiveDataResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DescriptiveDataResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DescriptiveDataResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v2/card/artists": {
+      "get": {
+        "tags": [
+          "Card"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v2/card/subtypes": {
+      "get": {
+        "tags": [
+          "Card"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v2/card/rarities": {
+      "get": {
+        "tags": [
+          "Card"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v2/card/conditions": {
+      "get": {
+        "tags": [
+          "Card"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v2/card/vendors": {
+      "get": {
+        "tags": [
+          "Card"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "additionalProperties": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "additionalProperties": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "additionalProperties": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v2/card/variants": {
+      "get": {
+        "tags": [
+          "Card"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/dbz/card/{query}": {
+      "get": {
+        "tags": [
+          "Card"
+        ],
+        "parameters": [
+          {
+            "name": "query",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DBZCard"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DBZCard"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DBZCard"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/digimon/card/{query}": {
+      "get": {
+        "tags": [
+          "Card"
+        ],
+        "parameters": [
+          {
+            "name": "query",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DigimonCard"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DigimonCard"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DigimonCard"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/set": {
+      "get": {
+        "tags": [
+          "Set"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PokemonSet"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PokemonSet"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PokemonSet"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/set/{id}": {
+      "get": {
+        "tags": [
+          "Set"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/PokemonSet"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PokemonSet"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PokemonSet"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v2/set": {
+      "get": {
+        "tags": [
+          "Set"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/NewPokemonSet"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/NewPokemonSet"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/NewPokemonSet"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v2/set/{id}": {
+      "get": {
+        "tags": [
+          "Set"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/NewPokemonSet"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NewPokemonSet"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NewPokemonSet"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v2/set/uuid/{uuid}": {
+      "get": {
+        "tags": [
+          "Set"
+        ],
+        "parameters": [
+          {
+            "name": "uuid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/NewPokemonSet"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NewPokemonSet"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NewPokemonSet"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/dbz/set": {
+      "get": {
+        "tags": [
+          "Set"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DBZSet"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DBZSet"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DBZSet"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/dbz/set/{id}": {
+      "get": {
+        "tags": [
+          "Set"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/DBZSet"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DBZSet"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DBZSet"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/digimon/set": {
+      "get": {
+        "tags": [
+          "Set"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DigimonSet"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DigimonSet"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DigimonSet"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/digimon/set/{id}": {
+      "get": {
+        "tags": [
+          "Set"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/DigimonSet"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DigimonSet"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DigimonSet"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "DBZCard": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "setId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "printedNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "imageUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "cardType": {
+            "type": "string",
+            "nullable": true
+          },
+          "rarity": {
+            "type": "string",
+            "nullable": true
+          },
+          "cardUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "setName": {
+            "type": "string",
+            "nullable": true
+          },
+          "cardText": {
+            "type": "string",
+            "nullable": true
+          },
+          "color": {
+            "type": "string",
+            "nullable": true
+          },
+          "energyCost": {
+            "type": "string",
+            "nullable": true
+          },
+          "specialTrait": {
+            "type": "string",
+            "nullable": true
+          },
+          "power": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "comboPower": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "comboEnergy": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "era": {
+            "type": "string",
+            "nullable": true
+          },
+          "cardCharacter": {
+            "type": "string",
+            "nullable": true
+          },
+          "isUltimate": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "isSuperCombo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "isDragonBall": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cardLimit": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "DBZSet": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "total": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "language": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DescriptiveDataResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/NewPokemonCard"
+            },
+            "nullable": true
+          },
+          "page": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pageSize": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "count": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "totalCount": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "DigimonCard": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "color": {
+            "type": "string",
+            "nullable": true
+          },
+          "stage": {
+            "type": "string",
+            "nullable": true
+          },
+          "attribute": {
+            "type": "string",
+            "nullable": true
+          },
+          "cardLevel": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "playCost": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "evolutionCost": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cardRarity": {
+            "type": "string",
+            "nullable": true
+          },
+          "artist": {
+            "type": "string",
+            "nullable": true
+          },
+          "dp": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cardNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "mainEffect": {
+            "type": "string",
+            "nullable": true
+          },
+          "inheritedEffect": {
+            "type": "string",
+            "nullable": true
+          },
+          "imageUrl": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DigimonSet": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "year": {
+            "type": "string",
+            "nullable": true
+          },
+          "total": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "language": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Listing": {
+        "type": "object",
+        "properties": {
+          "priceAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "priceCurrency": {
+            "type": "string",
+            "nullable": true
+          },
+          "dateUpdated": {
+            "type": "string",
+            "nullable": true
+          },
+          "listingUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "vendor": {
+            "type": "string",
+            "nullable": true
+          },
+          "variant": {
+            "type": "string",
+            "nullable": true
+          },
+          "condition": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "NewPokemonCard": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "setData": {
+            "type": "object",
+            "additionalProperties": {
+              "nullable": true
+            },
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "types": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "hp": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "evolvesFrom": {
+            "type": "string",
+            "nullable": true
+          },
+          "effect": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": { }
+            },
+            "nullable": true
+          },
+          "attacks": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": { }
+            },
+            "nullable": true
+          },
+          "rules": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "weaknesses": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": { }
+            },
+            "nullable": true
+          },
+          "resistances": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": { }
+            },
+            "nullable": true
+          },
+          "retreatCost": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "convertedRetreatCost": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "supertype": {
+            "type": "string",
+            "nullable": true
+          },
+          "subtypes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "rarity": {
+            "type": "string",
+            "nullable": true
+          },
+          "cardLegalities": {
+            "type": "object",
+            "additionalProperties": {
+              "nullable": true
+            },
+            "nullable": true
+          },
+          "artist": {
+            "type": "string",
+            "nullable": true
+          },
+          "imageUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "cardUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "sequenceNumber": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "printedNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "uuid": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "prices": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Listing"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "NewPokemonSet": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "source_url": {
+            "type": "string",
+            "nullable": true
+          },
+          "image_url": {
+            "type": "string",
+            "nullable": true
+          },
+          "language": {
+            "type": "string",
+            "nullable": true
+          },
+          "year": {
+            "type": "string",
+            "nullable": true
+          },
+          "date": {
+            "type": "string",
+            "nullable": true
+          },
+          "card_count": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "printed_count": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "set_code": {
+            "type": "string",
+            "nullable": true
+          },
+          "uuid": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PokemonCard": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "setId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "sequenceNumber": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "printedNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "imageUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "hp": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "evolvesFrom": {
+            "type": "string",
+            "nullable": true
+          },
+          "effect": {
+            "type": "string",
+            "nullable": true
+          },
+          "attacks": {
+            "type": "string",
+            "nullable": true
+          },
+          "rules": {
+            "type": "string",
+            "nullable": true
+          },
+          "weakness": {
+            "type": "string",
+            "nullable": true
+          },
+          "resistance": {
+            "type": "string",
+            "nullable": true
+          },
+          "retreatCost": {
+            "type": "string",
+            "nullable": true
+          },
+          "cardType": {
+            "type": "string",
+            "nullable": true
+          },
+          "rarity": {
+            "type": "string",
+            "nullable": true
+          },
+          "cardFormat": {
+            "type": "string",
+            "nullable": true
+          },
+          "illustrator": {
+            "type": "string",
+            "nullable": true
+          },
+          "cardUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "setName": {
+            "type": "string",
+            "nullable": true
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PokemonSet": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "year": {
+            "type": "string",
+            "nullable": true
+          },
+          "total": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "printedTotal": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "language": {
+            "type": "string",
+            "nullable": true
+          },
+          "setUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "shorthand": {
+            "type": "string",
+            "nullable": true
+          },
+          "image": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}
